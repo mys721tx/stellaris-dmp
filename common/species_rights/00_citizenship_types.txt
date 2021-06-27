@@ -151,10 +151,6 @@ citizenship_assimilation = {
 				}
 			}
 		}
-		custom_tooltip = {
-			fail_text = "disconnected_machine_pops_collapse_citizenship"
-			is_disconnected_machine_pop = no
-		}
 		if = {
 			limit = {
 				from = { has_authority = auth_machine_intelligence }
@@ -233,7 +229,10 @@ citizenship_assimilation = {
 			}
 			custom_tooltip = {
 				fail_text = CAN_ONLY_ASSIMILATE_HIVES
-				has_trait = trait_hive_mind
+				OR = {
+					has_trait = trait_hive_mind
+					has_trait = trait_machine_unit
+				}
 			}
 		}
 	}

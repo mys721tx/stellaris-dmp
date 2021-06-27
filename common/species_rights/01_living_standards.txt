@@ -14,7 +14,10 @@ living_standard_deassimilation = {
 	potential = {
 		host_has_dlc = "Utopia"
 		exists = from
-		has_trait = trait_hive_mind
+		OR = {
+			has_trait = trait_hive_mind
+			has_trait = trait_machine_unit
+		}
 		from = {
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 			has_ascension_perk = ap_evolutionary_mastery
